@@ -1,13 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import useWindowSize from "@rooks/use-window-size"
-import { useMediaQuery } from 'react-responsive'
 
+import Header from './Header';
 import Content from './Content';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedin, faTwitter, faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 
 function App() {
@@ -24,18 +22,15 @@ function App() {
     </div>
   );
 
-  const { innerWidth, innerHeight, outerHeight, outerWidth } = useWindowSize();
-  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
-
   return (
     <div className="App vertical">
-      <div id="header" className={!isPortrait?"horizontal":"vertical"}>
-        <div id="nameTitle">MATT HEADLEY</div>
+      <Header isLink={false}>
         <div id="titleBar">
           <a href="https://github.com/Ivniinvi" target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
+          <a href="https://www.linkedin.com/in/matthew-headley-8066b61b8/" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a>
           <a>Resume</a>
         </div>
-      </div>
+      </Header>
 
       {!projects ? <div id="emptyText">Projects go here!</div> : projects}
 

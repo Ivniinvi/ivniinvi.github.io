@@ -16,6 +16,7 @@
   width: max(100vw, 100%);
   min-height: 100vh;
   height: 100%;
+  width: 100vw;
   color: var(--color-light);
 }
 
@@ -28,10 +29,15 @@ a {
   -o-transition: color .2s linear;
   transition: color .2s linear;
 }
-
 a:hover {
   cursor: pointer;
   color: var(--color-accent);
+}
+p a{
+  color: var(--color-accent);
+}
+p a:hover{
+  color: var(--color-shade);
 }
 
 .colorMerge {
@@ -69,7 +75,6 @@ a:hover {
 
 #nameTitle {
   font-size: calc(var(--scale)*6);
-  color: var(--color-light);
   text-align: left;
   margin: 1vw;
 }
@@ -140,6 +145,29 @@ a:hover {
   color: var(--color-light);
   text-align: center;
   margin: calc(var(--scale)/2);
+}
+
+#bio{
+  display: flex;
+  justify-content: space-evenly;
+  margin: var(--scale);
+}
+#bioText{
+  font-size: calc(var(--scale)*1.2);
+  color: var(--color-light);
+  text-align: center;
+  min-width: calc(var(--scale)*10);
+}
+
+#bioPhoto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: calc(var(--scale)*5);
+}
+#bioPhoto img{
+  border-radius: calc(var(--scale)*5);
 }
 
 #footer {
