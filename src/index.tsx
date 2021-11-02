@@ -5,16 +5,14 @@ import App from './App';
 import About from './About';
 import reportWebVitals from './reportWebVitals';
 
-import { BrowserRouter, BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Link } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter >
-      <Switch>
-        <Route path="/about" component={About} />
-        <Route exact path="/" component={App} />
-      </Switch>
-    </BrowserRouter>
+    <HashRouter basename="/" >
+      <Route path="/about" component={About} />
+      <Route exact path="/" component={App} />
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
