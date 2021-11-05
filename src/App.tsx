@@ -16,8 +16,8 @@ function App() {
       <Content
         title="Open Source Commits"
         description=""
-        link="https://github.com/beestation"
-        image="https://pbs.twimg.com/media/EzgKy7vWUAAiJ9j?format=png&name=small"
+        link="https://github.com/BeeStation/BeeStation-Hornet/pulls?q=is%3Amerged+is%3Apr+author%3AIvniinvi+"
+        image="https://forums.beestation13.com/uploads/default/optimized/2X/3/3b0801025520d0a189d305372acefa5390e111c8_2_553x499.png"
       />
     </div>
   );
